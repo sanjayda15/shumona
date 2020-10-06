@@ -1,0 +1,42 @@
+{% load static %}
+{% url 'home' as home_url %}
+{% url 'products:products'  as products_url_list %}
+{% url 'products:menlist'   as men_url_list %}
+{% url 'products:womenlist' as women_url_list %}
+{% url 'products:kidslist'  as kids_url_list %}
+{% url 'contact' as contact_url %}
+
+<nav class="navbar shadow-sm navbar-expand-lg navbar-light fixed-top" style="background-color:#fff;">
+  <a class="navbar-brand" href="{{home_url}}">
+<img src="{% static 'resources/img/navlog.png'%}" width="70" height="70" class="d-inline-block  py-0 my-0" alt="" loading="lazy">
+    Shumona Trends.
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+
+    <ul class="navbar-nav ml-auto" id="navlist">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{home_url}}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if request.path == products_url_list %}active{% endif%}" href="{{products_url_list}}">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if request.path == men_url_list %}active{% endif%}" href="{{ men_url_list}}">Men</a>
+      </li>
+      <li class="nav-item {% if request.path == women_url_list %}active{% endif%}">
+        <a class="nav-link " href="{{women_url_list}}">Women</a>
+      </li>
+      <li class="nav-item {% if request.path == kids_url_list %}active{% endif%}">
+        <a class="nav-link " href="{{kids_url_list}}">Kids</a>
+      </li>
+      <li class="nav-item {% if request.path == contact_url %}active{% endif%}">
+        <a class="nav-link " href="{{contact_url}}">Contact us</a>
+      </li>
+
+    </ul>
+    </div>
+  </div>
+</nav>

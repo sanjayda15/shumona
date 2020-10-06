@@ -1,0 +1,12 @@
+<div class="card shadow justify-content-center mx-auto js--card" style="width: 17rem; height:30rem;">
+  {% if instance.image %}
+  <a href="{{instance.get_absolute_url}}">
+  <img style="height:400px; width:100%;" src="{{instance.image.url}}" class="card-img-top" alt="Loading..."></a>
+{% endif%}
+  <div class="card-body">
+    <h5 class="card-title" style="text-align: center;">{{instance.title}}</h5>
+    <h6 class="text-center"style="color:rgb(126, 27, 122);"><strong><i class="fas fa-rupee-sign"></i> {{instance.price}}</strong></h6>
+    <p class="card-text ">{{instance.description|truncatewords:8}}</p>
+
+  </div>
+</div>

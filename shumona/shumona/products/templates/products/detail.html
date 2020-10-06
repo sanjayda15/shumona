@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row mt-5">
+<h1 class="mt-5 mx-auto text-center js--fashion" style="border-bottom: 3px solid #6d4c41;text-align:center;">{{object.title}}</h1>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6 col-xs-12">
+      {% if object.image %}
+        <img src="{{object.image.url}}" id="zoom" class="img-fluid center-block shadow p-3 mb-5 bg-white rounded js--card " style="height:500px; width:500px;"alt="No Image">
+      {% endif %}
+
+    </div>
+    <div class="col-lg-6 col-xs-12 js--card">
+
+        <div class="row">
+        <div class="col">
+          <div class="jumbotron rounded pt-2 bg-white shadow " style=" width:100%;">
+            <h3 class="text-center pt-0 mt-1">Description</h3>
+            <p class="text-center"> <b>Product-Title:</b> {{object.title}} </p>
+            <p><b>Detail</b>{{object.description|truncatewords:50}}</p>
+            <h6 class="text-center"style="color:rgb(126, 27, 122);"><strong><i class="fas fa-rupee-sign"></i> {{object.price}}</strong></h6>
+
+            <div class="row mt-3 mb-0">
+        <div class="col text-center">
+          <h4>Like It?</h4>
+          <a href="{% url 'contact' %}" add target="_self _blank">
+          <button class="btn btn-outline-danger " name="button"> Contact Us</button>
+          </a>
+        </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+</div>
+{% endblock %}

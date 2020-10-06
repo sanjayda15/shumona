@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  {% include 'base/css.html' %}
+  <title>Shumona Trends</title>
+</head>
+<body>
+  <div class="header">
+    <div class="box-3">
+      <nav class="navbar navbar-expand-lg back mynav " id='nave'>
+        <a class="navbar-brand" href="{% url 'home' %}">
+          <img src="{% static 'resources/img/logotxt.png'%}" width="160" height="150" alt="SHUMONA">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse  navbar-collapse " id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto mr-5 rounded " id="hovers">
+            <li class="nav-item active ">
+              <a class="nav-link " href="{% url 'products:products' %}">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'products:menlist' %}">Men</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'products:womenlist' %}">Women</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'products:kidslist' %}">kids</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+            </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="box-2">
+    </div>
+
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src='{% static "resources/media/ws.mp4"%}' type="video/mp4">
+      </video>
+
+      <div class="container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+          <div class="w-100 text-white-50">
+            <h1 class="display-3">SHUMONA TRENDS.</h1>
+            <p class="lead mb-3"><span class="typer" id="main" data-words="INDIAN,EXCLUSIVE,WESTERN" data-delay="100" data-deleteDelay="1000" data-colors="#bdbdbd"></span>
+                <span  data-owner="main"></span>FASHION</p>
+            <a href="#fashion" class="btn btn-outline-dark js--scroll-to-products">Products</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="container js--fashion" id="fashion">
+      <div class="fashion">
+        <h1 class="text-center mx-auto col-4">Fashion Trends</h1>
+      </div>
+    </div>
+
+    <div class="container-fluid js--product">
+      <div class="row">
+        <div class="card shadow mx-5 mb-5 col-md-10 col-sm-12 col-lg-3 px-0 ">
+        <a href="{% url 'products:menlist' %}"><img class="card-img-top " height="473" src="{% static "resources/img/mens.jpeg"%}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h4 class="text-center mx-auto" style="border-bottom: 3px solid #6d4c41;width:20%;text-align: center;">Men</h4>
+            <p class="card-text">Best Indian men's fashion wear we are selling all over the world, Just have a look in our website. </p>
+          </div>
+        </div>
+        <div class="card shadow mx-5 mb-5 col-md-10 col-sm-12 col-lg-3 px-0 hoverable ">
+          <a href="{% url 'products:womenlist' %}"><img class="card-img-top" height="473" src="{% static "resources/img/women.jpeg"%}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h4 class="text-center mx-auto" style="border-bottom: 3px solid #6d4c41;width:40%;text-align: center;">Women</h4>
+            <p class="card-text">We pick the best Women's wear and we are selling all over the world, Just have a look in our website.</p>
+          </div>
+        </div>
+        <div class="card  shadow ml-5 mb-5 col-md-10 col-sm-12 col-lg-3 mr-5 px-0 hoverable ">
+    <a href="{% url 'products:kidslist' %}"><img class="card-img-top" height="473" src="{% static "resources/img/kids.jpeg"%}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h4 class="text-center mx-auto" style="border-bottom: 3px solid #6d4c41;width:20%;text-align: center;">Kids</h4>
+            <p class="card-text">Have a good looking collection in our kids section, Just have a look in our website.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    {% include "base/js.html" %}
+    {% include "base/footer.html" %}
+  </body>
+  </html>

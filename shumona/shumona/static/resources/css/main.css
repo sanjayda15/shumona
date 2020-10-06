@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+  background-image: url("pink_rice.png");
+  position: relative;
+    background-color: #fff;
+    color: #201f1f;
+    font-family: 'PT Serif', serif, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+/*------vedio-----*/
+
+
+/* navbar */
+.header video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.header .box-2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 1;
+
+}
+nav .phonenav{
+  background-color: rgb(190, 190, 190);
+}
+
+nav .back{
+  background-color: rgba(0, 0, 0, 0)
+}
+
+
+
+.header .box-3 nav{
+
+  position: absolute;
+  z-index:4 ;
+  width: 100%;
+
+}
+
+.header .container {
+  position: relative;
+  z-index: 3;
+}
+.header{
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height:100%;
+  width: 100%;
+  overflow: hidden;
+
+}
+/* button */
+/* .vedioa{
+  position: absolute;
+} */
+.container .fashion h1{
+  border-bottom: 3px solid #6d4c41;
+  border-size:12px;
+  padding: 3px 0;
+
+}
+
+.mynav a{
+  margin-right: 20px;
+  border-bottom: 2px solid transparent;
+}
+
+.mynav a:hover{
+border-bottom: 2px solid #fff;
+}
+
+
+/* animation */
+:root {
+  --animate-duration: 1000ms;
+  --animate-delay: 1s;
+}
+/* icons */
+.fa-facebook:hover {
+  color:#4267B2;
+ }
+ .fa-facebook-f:hover {
+   color:#4267B2;
+  }
+
+.fa-instagram:hover{
+  color: #3f729b;
+}
+
+
+.fa-whatsapp:hover{
+  color: #25D366;
+}
+.fa-whatsapp-square:hover{
+  color: #129142;
+}
+
+.fa-twitter:hover{
+  color:#00acee;
+}
+.fa-google-plus-g:hover{
+  color: red;
+}
+
+.social-button a:link,
+.social-button a:visited{
+  color: rgb(32, 32, 32);
+}
+/* detailzoom */

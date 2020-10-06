@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+<div class="row mt-5">
+<h1 class="mt-5 mx-auto text-center js--fashion" style="border-bottom: 3px solid #6d4c41;text-align:center;" >Contact Us</h1>
+</div>
+<div class="container shadow mb-1 bg-white rounded js--card">
+  <div class="mt-2 row">
+    <div class="col-lg-6 col-xs-12 ">
+      <h4 class="text-center mt-2">Details:-</h4>
+      <form class="labelcontact" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="row">
+  <button type="submit" class="btn btn-outline-danger mx-auto my-2">Submit</button>
+        </div>
+
+      </form>
+
+    </div>
+    <div class="col-lg-6 col-xs-12" id='contact'>
+      <h4 class="text-center mt-2">Follow Us:-</h4>
+      <div class="container ml-1 mt-4">
+        <h5 class="text-center"><a href="tel:+91 98213 12140"><span style="font-size: 2em; color: Tomato;">
+    <i class="fas fa-mobile-alt"></i>
+  </span></a> <br>+91 98213 12140</h5><br>
+  <h5 class="text-center"> <a href="https://www.google.com/maps/place/Gurugram,+Haryana/@28.4228859,76.8496637,11z/data=!3m1!4b1!4m5!3m4!1s0x390d19d582e38859:0x2cf5fe8e5c64b1e!8m2!3d28.4594965!4d77.0266383" add target="_blank"> <span style="font-size:2em; color:Tomato;"><i class="fas fa-map-marker-alt"></i></span></a><br> Gurgaon,Haryana,India </h5>
+      </div>
+      <br>
+      <h5 class="text-center"><a href="mailto:pshumona@gmail.com ">  <span style="font-size:2em; color:Tomato;"><i class="far fa-envelope"></i></span></a> <br>pshumona@gmail.com </h5>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-3 mx-auto">
+          <h5 class="text-center"> <a add target="_blank" href="https://www.facebook.com/Shumona-Fashion-Trends-111924873966345/?eid=ARDUHY7DSJmjnhkOLkxZ-sOd--0DD50EBNymw30wEs0NcL2e3-8VsSA7yjBPtIZXBueTOuzUvkMC04gg"> <span style="font-size:2.5em; color:rgba(#4267b3,0.9);"><i class="fab fa-facebook-square"></i></span></a></h5>
+        </div>
+
+
+        <div class="col-3 mx-auto">
+          <h5 class="text-center"><a add target="_blank" href="https://wa.me/+919821312140"><span style="font-size:2.5em; color:#50cf5e;"><i class="fab fa-whatsapp-square"></i></span></a></h5>
+        </div>
+        <div class="col-3 mx-auto">
+        <h5 class="text-center"><a add target="_blank" href="https://www.instagram.com/shumonatrends/"><span style="font-size:2.5em;"><i class="fab fa-instagram"></i></span></a></h5>
+        </div>
+        <div class="col-3 mx-auto">
+          <h5 class="text-center"><a href="#"><span style="font-size:2.5em; color:rgba(#00acee,0.9);"><i class="fab fa-twitter"></i></span></a></h5>
+        </div>
+
+              </div>
+
+  </div>
+  </div>
+</div>
+</div>
+
+
+{% endblock %}
